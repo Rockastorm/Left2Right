@@ -1,8 +1,15 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
+
+
+
+
 
 public class CircleBehaviour : MonoBehaviour
 {
+    public gm gm;
 
+    
 
 
 
@@ -21,7 +28,12 @@ public class CircleBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gm.SpawnCircle();
+        
         Destroy(collision.gameObject);
+
+        gm.score++;
+
     }
 
 
